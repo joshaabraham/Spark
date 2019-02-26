@@ -17,12 +17,16 @@ import { fuseConfig } from 'app/fuse-config';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
-import { AppRoutingModule } from 'app/app-routing.module';
+
 
 const appRoutes: Routes = [
     {
-        path      : '**',
-        redirectTo: 'sample'
+        path        : 'pages',
+        loadChildren: './main/pages/pages.module#PagesModule'
+    },
+    {   
+        path        : '**',
+        redirectTo  : 'sample'
     }
 ];
 
@@ -55,7 +59,7 @@ const appRoutes: Routes = [
         // App modules
         LayoutModule,
         SampleModule,
-        AppRoutingModule
+       
     ],
     bootstrap   : [
         AppComponent

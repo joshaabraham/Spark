@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AdministrationModule } from './administration/administration.module';
 import { AuthenticationModule } from './authentication/authentication.module';
@@ -18,6 +19,14 @@ import { RechercheModule } from './recherche/recherche.module';
 import { RecommandationModule } from './recommandation/recommandation.module';
 import { SocieteModule } from './societe/societe.module';
 import { SportModule } from './sport/sport.module';
+
+
+const appRoutes: Routes = [
+    {
+        path        : 'auth',
+        loadChildren: './main/Apps/pages/authentication.module#AuthenticationModule'
+    }
+];
 
 
 @NgModule({
