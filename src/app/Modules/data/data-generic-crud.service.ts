@@ -1,7 +1,13 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+
 import { environment } from '../../../environments/environment';
+import { TableMap } from '../table-map';
+import { DataCreate } from './_create';
+import { DataDelete } from './_delete';
+import { DataRead } from './_read';
+import { DataUpdate } from './_update';
 
 @Injectable({
   providedIn: 'root'
@@ -39,11 +45,11 @@ export class DataService {
             this.DU.setDataService(this);
             this.DD.setDataService(this);
 
-           // this.setupLocalProps();
+            this.setupLocalProps();
         }
 
   
-        private setupLocalProps() {
+        private setupLocalProps(): void {
           // TODO: Figure out how to make a subject with the correct TS model based on the table name
           Object.keys(TableMap).forEach(tableName => {
             this.loadingMap[TableMap[tableName]] = false;
@@ -60,7 +66,7 @@ export class DataService {
          */
       
         // CREATE
-        create<T>(model: T | any, objToCreate?: T | any) {
+        create<T>(model: T | any, objToCreate?: T | any): void {
           this.DC.create(model, objToCreate);
         }
       
@@ -73,7 +79,7 @@ export class DataService {
         }
       
         // READ
-        read<T>(model: T | any, query?: HttpParams | string | any) {
+        read<T>(model: T | any, query?: HttpParams | string | any): void {
           this.DR.read(model, query);
         }
       
@@ -86,7 +92,7 @@ export class DataService {
         }
       
         // UPDATE
-        update<T>(model: T | any, objToUpdate: T | any) {
+        update<T>(model: T | any, objToUpdate: T | any): void {
           this.DU.update(model, objToUpdate);
         }
       
@@ -99,7 +105,7 @@ export class DataService {
         }
       
         // DELETE
-        delete<T>(model: T | any, objToDelete: T | any, stopNotify?: boolean) {
+        delete<T>(model: T | any, objToDelete: T | any, stopNotify?: boolean): void {
           this.DD.delete(model, objToDelete, stopNotify);
         }
         

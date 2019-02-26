@@ -19,6 +19,7 @@ import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
 import { PagesModule } from './main/pages/pages.module';
 
+import { DataModule } from './Modules/data/data.module';
 
 const appRoutes: Routes = [
     {
@@ -60,7 +61,10 @@ const appRoutes: Routes = [
         // App modules
         LayoutModule,
         SampleModule,
-        PagesModule
+        PagesModule,
+
+        // DataModule generic
+        DataModule
        
     ],
     bootstrap   : [
