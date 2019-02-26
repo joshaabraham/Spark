@@ -23,8 +23,8 @@ import { SportModule } from './sport/sport.module';
 
 const appRoutes: Routes = [
     {
-        path        : 'auth',
-        loadChildren: './main/Apps/pages/authentication.module#AuthenticationModule'
+        path        : '**',
+        redirectTo: './main/Apps/pages/authentication.module#AuthenticationModule'
     }
 ];
 
