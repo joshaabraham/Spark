@@ -19,6 +19,7 @@ import { RechercheModule } from './recherche/recherche.module';
 import { RecommandationModule } from './recommandation/recommandation.module';
 import { SocieteModule } from './societe/societe.module';
 import { SportModule } from './sport/sport.module';
+import { PagesComponent } from './pages.component';
 
 
 const appRoutes: Routes = [
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
         RecommandationModule,
         SocieteModule,
         SportModule
-    ]
+    ],
+    declarations: [PagesComponent]
 })
 export class PagesModule
 {
