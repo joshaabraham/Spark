@@ -20,6 +20,30 @@ export const navigation: FuseNavigation[] = [
                     bg       : '#F44336',
                     fg       : '#FFFFFF'
                 }
+            },
+            {
+                id       : 'association',
+                title    : 'Association',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'group',
+                url      : '/association',
+            },
+            {
+                id       : 'entreprise',
+                title    : 'Entreprise',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'business',
+                url      : '/entreprise',
+            },
+            {
+                id       : 'professionel',
+                title    : 'Professionel',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'work',
+                url      : '/professionel',
             }
         ]
     }

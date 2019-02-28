@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
-import { TableMap } from '../table-map';
+import { TableMap } from 'app/Models/table-map';
 import { DataCreate } from './_create';
 import { DataDelete } from './_delete';
 import { DataRead } from './_read';
