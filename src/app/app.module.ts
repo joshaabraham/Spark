@@ -28,7 +28,7 @@ const appRoutes: Routes = [
     },
     {   
         path        : 'sample',
-        loadChildren  : 'sample'
+        loadChildren  : './main/sample/sample.module#SampleModule'
     }
 ];
 
