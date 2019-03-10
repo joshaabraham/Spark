@@ -22,14 +22,19 @@ import { PagesModule } from './main/pages/pages.module';
 import { DataModule } from './Modules/data/data.module';
 
 const appRoutes: Routes = [
+    {   
+        path         : '' , 
+        loadChildren : './main/pages/pages.module#PagesModule'},
+    {   
+        path         : 'pages' , 
+        loadChildren : './main/pages/pages.module#PagesModule'},
     {
-        path        : '**',
-        redirectTo: './main/pages/pages.module#PagesModule'
-    },
+        path         : '**',
+        redirectTo   : 'apps/dashboards/analytics'},
     {   
         path        : 'sample',
         loadChildren  : 'sample'
-    }
+    } 
 ];
 
 @NgModule({

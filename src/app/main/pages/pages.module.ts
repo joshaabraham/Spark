@@ -21,11 +21,10 @@ import { SocieteModule } from './societe/societe.module';
 import { SportModule } from './sport/sport.module';
 import { PagesComponent } from './pages.component';
 
-
-const appRoutes: Routes = [
+const routes = [
     {
-        path        : 'auth',
-        redirectTo: './main/Apps/pages/authentication.module#AuthenticationModule'
+        path     : 'pages',
+        component: PagesComponent
     }
 ];
 
@@ -49,7 +48,8 @@ const appRoutes: Routes = [
         RechercheModule,
         RecommandationModule,
         SocieteModule,
-        SportModule
+        SportModule,
+        RouterModule.forChild(routes),
     ],
     declarations: [PagesComponent]
 })
