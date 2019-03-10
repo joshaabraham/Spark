@@ -33,8 +33,8 @@ const appRoutes: Routes = [
         redirectTo   : 'apps/dashboards/analytics'},
     {   
         path        : 'sample',
-        loadChildren  : 'sample'
-    } 
+        loadChildren  : './main/sample/sample.module#SampleModule'
+    }
 ];
 
 @NgModule({
